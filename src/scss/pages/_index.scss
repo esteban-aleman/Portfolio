@@ -1,0 +1,45 @@
+.about {
+  height: 100vh;
+  background-position: 20vh 20vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 60vh;
+  transition: all 2s;
+}
+
+.bg-me--color {
+  background-image: url(../assets/img/meC.png);
+
+  @media (max-width: 992px) {
+    background-image: none;
+  }
+}
+
+.bg-me--black-white {
+  background-image: url(../assets/img/meBW.png);
+  @media (max-width: 992px) {
+    background-image: none;
+  }
+}
+
+.projects__item-img {
+  display: block;
+  width: 50%;
+  margin-left: 25%;
+  height: 5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.img--explore {
+  background-image: url(../assets/img/explore.png);
+}
+
+.img--xbase {
+  background-image: url(../assets/img/xbase.png);
+}
+
+.img--litflare {
+  background-image: url(../assets/img/litflare.png);
+}

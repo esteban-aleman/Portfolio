@@ -1,0 +1,30 @@
+{
+  "name": "wdesignpractice",
+  "version": "1.0.0",
+  "description": "Scss practice following a design",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/gulp start",
+    "deploy": "./node_modules/.bin/gulp deploy"
+  },
+  "author": "Esteban Aleman",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^5.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-stylelint": "^7.0.0",
+    "gulp-svg-sprite": "^1.4.0",
+    "gulp-uglify": "^3.0.1",
+    "gulp-util": "^3.0.8",
+    "gulp-webserver": "^0.9.1",
+    "pump": "^3.0.0",
+    "stylelint": "^9.4.0",
+    "uglify": "^0.1.5"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.2",
+    "font-awesome": "^4.7.0"
+  }
+}

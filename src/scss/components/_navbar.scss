@@ -1,0 +1,16 @@
+.main-nav {
+  height: 5rem;
+}
+
+.navbar-collapse {
+  z-index: 1;
+}
+
+.navbar-toggler {
+  top: 1.3rem;
+  right: 1rem;
+
+  &:focus {
+    outline: none;
+  }
+}

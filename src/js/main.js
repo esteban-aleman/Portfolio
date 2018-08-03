@@ -1,0 +1,58 @@
+//To get the about-me photo to change on scroll
+var about = document.getElementById("about-me-section");
+
+window.onscroll = function() {
+  if (document.scrollingElement.scrollTop > 10) {
+    about.classList.add('bg-me--black-white');
+    about.classList.remove('bg-me--color');
+  } else if(document.scrollingElement.scrollTop === 0){
+    about.classList.add('bg-me--color');
+    about.classList.remove('bg-me--black-white');
+  }
+};
+//To revel icons on scrool with the scroll-reveal library
+window.sr = ScrollReveal();
+sr.reveal('.skills__tech-item',{ duration: 2500 });
+sr.reveal('.skills__soft-item',{ duration: 2500 })
+
+
+//SmoothScroll
+$(document).ready(function () {
+  $(document).on("scroll", onScroll);
+
+  //smoothscroll
+  $('a[href^="#"]').on('click', function (e) {
+    e.preventDefault();
+    $(document).off("scroll");
+
+    $('a').each(function () {
+      $(this).removeClass('active');
+    })
+    $(this).addClass('active');
+
+    var target = this.hash,
+      menu = target;
+    $target = $(target);
+    $('html, body').stop().animate({
+      'scrollTop': $target.offset().top+2
+    }, 500, 'swing', function () {
+      window.location.hash = target;
+      $(document).on("scroll", onScroll);
+    });
+  });
+});
+
+function onScroll(event){
+  var scrollPos = $(document).scrollTop();
+  $('#nav-links a').each(function () {
+    var currLink = $(this);
+    var refElement = $(currLink.attr("href"));
+    if (refElement.position().top-50 <= scrollPos && refElement.position().top-50 + refElement.height() > scrollPos) {
+      $('#navbar-links li a').removeClass("active");
+      currLink.addClass("active");
+    }
+    else{
+      currLink.removeClass("active");
+    }
+  });
+}
