@@ -8,6 +8,7 @@ const gulpStylelint = require('gulp-stylelint');
 const eslint = require('gulp-eslint');
 var uglify = require('gulp-uglify');
 var pump = require('pump');
+var deploy      = require('gulp-gh-pages');
 
 /* tasks */
 // gulp.task(
@@ -106,3 +107,10 @@ gulp.task('deploy', [
     'styles',
     'js'
 ], cb => cb)
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy-git', function () {
+    return gulp.src("./dist/**/*")
+        .pipe(deploy())
+});
